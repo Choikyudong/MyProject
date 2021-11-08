@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    group:
+      local: "local,common"
+      dev: "runtime,common"
+
+---
+spring:
+  config:
+    activate:
+      on-profile: common
+
+server:
+  port: 8080
+  tomcat:
+    uri-encoding: UTF-8

@@ -1,0 +1,22 @@
+spring:
+  config:
+    activate:
+      on-profile: runtime
+  datasource:
+    url: jdbc:mysql://localhost:3306/database
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 1234
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+jwt:
+  key: thisismysecret
+  exp: 30000  # 1분
+#  refresh: 60000 # 1분
+  refresh: 3600000 # 1시간
